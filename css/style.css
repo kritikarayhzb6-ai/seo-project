@@ -784,3 +784,58 @@ button{ font: inherit; background: none; border: none; cursor: pointer; color: i
   .contact-panel .stat-rule{ display: none; }
   .form-row{ grid-template-columns: 1fr; }
 }
+
+/* ===== SEO AUDIT REPORT ===== */
+.audit-page{ background: var(--bone); color: var(--ink); }
+.audit-page .site-header{ background: rgba(246, 241, 231, 0.92); border-bottom-color: rgba(18, 16, 20, 0.1); }
+.audit-page .logo{ color: var(--ink); }
+.audit-page .main-nav a{ color: rgba(18, 16, 20, 0.68); }
+.audit-page .main-nav a:hover,
+.audit-page .main-nav a.active{ color: var(--ink); }
+.audit-page .nav-toggle span{ background: var(--ink); }
+.audit-hero{ padding: clamp(70px, 10vw, 130px) 0 55px; border-bottom: 1px solid rgba(18, 16, 20, 0.12); }
+.audit-wrap{ max-width: 1100px; margin: 0 auto; padding: 0 var(--pad); }
+.audit-kicker{ color: var(--oxblood); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.audit-hero h1{ max-width: 760px; margin-top: 16px; font-family: var(--font-display); font-size: clamp(2.8rem, 7vw, 6.5rem); font-weight: 500; line-height: 0.98; }
+.audit-hero h1 em{ color: var(--oxblood); font-weight: 400; }
+.audit-meta{ display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 28px; color: rgba(18, 16, 20, 0.62); font-size: 0.9rem; }
+.audit-summary{ padding: 55px 0; background: var(--ink); color: var(--bone); }
+.audit-summary p{ max-width: 72ch; color: rgba(246, 241, 231, 0.78); font-size: 1.05rem; }
+.audit-summary p + p{ margin-top: 18px; }
+.audit-section{ padding: 70px 0; }
+.audit-section + .audit-section{ border-top: 1px solid rgba(18, 16, 20, 0.12); }
+.audit-section h2{ margin-bottom: 28px; font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.3rem); font-weight: 500; line-height: 1.05; }
+.audit-section h2 em{ color: var(--oxblood); font-weight: 400; }
+.audit-section h3{ margin: 36px 0 10px; font-family: var(--font-display); font-size: 1.55rem; font-weight: 500; }
+.audit-section p{ max-width: 75ch; color: rgba(18, 16, 20, 0.72); }
+.audit-section p + p{ margin-top: 14px; }
+.audit-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(18, 16, 20, 0.16); border: 1px solid rgba(18, 16, 20, 0.16); }
+.audit-card{ min-height: 145px; padding: 22px; background: var(--bone); }
+.audit-card strong{ display: block; color: var(--oxblood); font-family: var(--font-display); font-size: 1.25rem; font-weight: 500; }
+.audit-card span{ display: block; margin-top: 12px; color: rgba(18, 16, 20, 0.68); font-size: 0.9rem; }
+.audit-table{ width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.audit-table th,
+.audit-table td{ padding: 16px 14px; border-bottom: 1px solid rgba(18, 16, 20, 0.14); text-align: left; vertical-align: top; }
+.audit-table th{ color: var(--oxblood); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.audit-table td:first-child{ font-weight: 600; }
+.audit-status{ color: var(--oxblood); font-weight: 600; white-space: nowrap; }
+.audit-findings{ display: grid; gap: 18px; }
+.audit-finding{ padding: 24px; border: 1px solid rgba(18, 16, 20, 0.15); border-left: 3px solid var(--oxblood); }
+.audit-finding h3{ margin: 0 0 10px; }
+.audit-finding p{ font-size: 0.94rem; }
+.audit-finding p + p{ margin-top: 12px; }
+.audit-finding strong{ color: var(--oxblood); }
+.audit-list,
+.audit-steps{ display: grid; gap: 12px; padding-left: 1.2rem; max-width: 75ch; color: rgba(18, 16, 20, 0.75); }
+.audit-steps{ counter-reset: audit-step; list-style: none; padding-left: 0; }
+.audit-steps li{ counter-increment: audit-step; padding: 16px 18px 16px 56px; position: relative; border-bottom: 1px solid rgba(18, 16, 20, 0.12); }
+.audit-steps li::before{ content: counter(audit-step, decimal-leading-zero); position: absolute; left: 0; top: 16px; color: var(--oxblood); font-family: var(--font-display); font-size: 1.35rem; }
+.audit-code{ display: inline-block; padding: 3px 6px; background: rgba(18, 16, 20, 0.08); color: var(--oxblood); font-family: monospace; font-size: 0.85em; }
+.audit-footer{ padding: 32px 0 50px; border-top: 1px solid rgba(18, 16, 20, 0.14); color: rgba(18, 16, 20, 0.58); font-size: 0.85rem; }
+.audit-page .site-footer{ background: var(--ink); }
+@media (max-width: 760px){
+  .audit-page .main-nav{ background: var(--bone); }
+  .audit-grid{ grid-template-columns: 1fr; }
+  .audit-table{ display: block; overflow-x: auto; white-space: nowrap; }
+  .audit-table td:last-child{ white-space: normal; min-width: 240px; }
+}
