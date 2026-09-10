@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://digidracua.vercel.app/sitemap.xml
+Sitemap: https://seo-project-lake.vercel.app/sitemap.xml

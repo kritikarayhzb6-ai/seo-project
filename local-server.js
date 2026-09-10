@@ -4,7 +4,7 @@ const path = require('path');
 
 const root = __dirname;
 const port = 5500;
-const productionImageUrl = 'https://digidracua.vercel.app/images/og-image.png';
+const productionImageUrl = 'https://seo-project-lake.vercel.app/images/og-image.png';
 const localImageUrl = `http://127.0.0.1:${port}/images/og-image.png`;
 const mimeTypes = {
   '.html': 'text/html; charset=utf-8',

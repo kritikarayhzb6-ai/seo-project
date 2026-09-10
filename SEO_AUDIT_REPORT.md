@@ -48,7 +48,7 @@ The footer and contact panel use `+91 00000 00000`. Social links point to `#`. T
 
 #### 3. Final production domain must be confirmed
 
-The canonical URLs and sitemap currently use `https://digidracua.vercel.app/`.
+The canonical URLs and sitemap use the current production deployment at `https://seo-project-lake.vercel.app/`.
 
 **Recommendation:** If a custom domain is used, update every canonical URL, Open Graph URL, sitemap URL, and robots sitemap reference. Redirect alternate domains to one preferred HTTPS domain.
 
