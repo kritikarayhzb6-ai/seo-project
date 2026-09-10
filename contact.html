@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact a Digital Marketing Agency in Hazaribagh | Digi Dracuaa</title>
-<meta name="description" content="Contact Digi Dracuaa in Hazaribagh about website creation, SEO, digital marketing, automation, video, advertising, or app development.">
+<meta name="description" content="Contact Digi Dracuaa in Hazaribagh about SEO, website development, digital marketing, automation, video, or app development.">
 <meta name="keywords" content="contact digital marketing agency Hazaribagh, SEO consultation, website development enquiry">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Digi Dracuaa">
@@ -17,8 +17,8 @@
 <meta property="og:url" content="https://seo-project-lake.vercel.app/contact.html">
 <meta property="og:image" content="https://seo-project-lake.vercel.app/images/og-image.png">
 <meta name="twitter:image" content="https://seo-project-lake.vercel.app/images/og-image.png">
-<meta property="og:image:width" content="1254">
-<meta property="og:image:height" content="1254">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Digi Dracuaa logo">
 <meta property="og:image:type" content="image/png">
 <meta name="twitter:card" content="summary_large_image">
@@ -27,7 +27,8 @@
 <meta name="twitter:image:alt" content="Digi Dracuaa logo">
 <meta name="twitter:url" content="https://seo-project-lake.vercel.app/contact.html">
 <link rel="canonical" href="https://seo-project-lake.vercel.app/contact.html">
-<link rel="icon" type="image/png" href="/images/favicaon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -45,7 +46,7 @@
       <span class="logo-text">Digi Dracuaa</span>
     </a>
 
-    <nav class="main-nav" id="mainNav">
+    <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -65,44 +66,44 @@
 <!-- ===== PAGE INTRO ===== -->
 <section class="page-intro">
   <div class="page-intro-wrap">
-    <h1>Tell us what's <em>stuck, slow, or missing.</em></h1>
+    <h1 id="contact-heading">Tell us what's <em>stuck, slow, or missing.</em></h1>
     <p>Fill this in and we'll reply within one business day with next steps — no discovery call required just to get a straight answer.</p>
   </div>
 </section>
 
 <!-- ===== CONTACT ===== -->
-<section class="contact-section">
-  <div class="contact-wrap">
-
+<main>
+    <section class="contact-section" aria-labelledby="contact-heading">
+    <div class="contact-wrap">
     <form class="contact-form" id="contactForm" novalidate>
       <div class="form-row">
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-          <span class="form-error">Please enter your name.</span>
+          <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error" required>
+          <span class="form-error" id="name-error">Please enter your name.</span>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-          <span class="form-error">Please enter a valid email.</span>
+          <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error" required>
+          <span class="form-error" id="email-error">Please enter a valid email.</span>
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group">
           <label for="service">Service needed</label>
-          <select id="service" name="service" required>
+          <select id="service" name="service" aria-describedby="service-error" required>
             <option value="" disabled selected>Select one</option>
             <option value="web">Website Creation</option>
             <option value="marketing">Digital Marketing</option>
             <option value="ai">AI Automation</option>
-            <option value="video">Video , Motion Graphics</option>
+            <option value="video">Video and Motion Graphics</option>
             <option value="ads">Ad Shoots</option>
             <option value="android">Android App</option>
             <option value="desktop">Desktop App</option>
             <option value="multiple">Multiple / Not sure</option>
           </select>
-          <span class="form-error">Please select a service.</span>
+          <span class="form-error" id="service-error">Please select a service.</span>
         </div>
         <div class="form-group">
           <label for="budget">Approximate budget</label>
@@ -118,12 +119,13 @@
 
       <div class="form-group">
         <label for="message">Tell us about the project</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-        <span class="form-error">Please add a few details about your project.</span>
+        <textarea id="message" name="message" rows="5" aria-describedby="message-error" required></textarea>
+          <span class="form-error" id="message-error">Please add a few details about your project.</span>
       </div>
 
       <button type="submit" class="btn btn-primary">Send message</button>
-      <p class="form-success" id="formSuccess">Thanks — we've got it and will reply within one business day.</p>
+      <p class="form-success" id="formSuccess" role="status" aria-live="polite"></p>
+      <p class="form-error form-error-global" id="formError" role="alert">Please correct the highlighted fields.</p>
     </form>
 
     <div class="contact-panel">
@@ -148,6 +150,7 @@
 
   </div>
 </section>
+</main>
 
 <!-- ===== FOOTER ===== -->
 <footer class="site-footer">
@@ -161,7 +164,7 @@
           </svg>
           <span class="logo-text">Digi Dracuaa</span>
         </a>
-        <p class="footer-tag">A full-stack digital marketing , IT agency.</p>
+        <p class="footer-tag">A full-stack digital marketing and IT agency.</p>
       </div>
 
       <div class="footer-col">
@@ -182,7 +185,7 @@
           <li><a href="services.html#web">Website Creation</a></li>
           <li><a href="services.html#marketing">Digital Marketing</a></li>
           <li><a href="services.html#ai">AI Automation</a></li>
-          <li><a href="services.html#motion">Video, Motion</a></li>
+          <li><a href="services/video-motion.html">Video and Motion</a></li>
           <li><a href="services.html#android">App Development</a></li>
         </ul>
       </div>
@@ -200,9 +203,9 @@
     <div class="footer-bottom">
       <span> 2026 Digi Dracuaa. All rights reserved.</span>
       <div class="footer-social">
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="Behance">Behance</a>
+        <span>Instagram profile pending</span>
+        <span>LinkedIn profile pending</span>
+        <span>Behance profile pending</span>
       </div>
     </div>
   </div>

@@ -1,20 +1,41 @@
-// Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('mainNav');
 
-navToggle.addEventListener('click', () => {
-  const isOpen = mainNav.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', isOpen);
+const trackEvent = (name, parameters = {}) => {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', name, parameters);
+  }
+  if (Array.isArray(window.dataLayer)) {
+    window.dataLayer.push({ event: name, ...parameters });
+  }
+};
+
+if (navToggle && mainNav) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+  link.addEventListener('click', () => trackEvent('email_click', { link_url: link.href }));
 });
 
-// Close mobile nav on link click
-mainNav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mainNav.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  });
+document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+  link.addEventListener('click', () => trackEvent('phone_click', { link_url: link.href }));
 });
-// Portfolio filter
+
+document.querySelectorAll('.btn, .nav-cta').forEach(link => {
+  link.addEventListener('click', () => trackEvent('cta_click', { link_text: link.textContent.trim() }));
+});
+
 const filterBtns = document.querySelectorAll('.filter-btn');
 const portItems = document.querySelectorAll('.port-item');
 
@@ -22,6 +43,7 @@ filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
+    filterBtns.forEach(filterButton => filterButton.setAttribute('aria-pressed', String(filterButton === btn)));
 
     const filter = btn.dataset.filter;
     portItems.forEach(item => {
@@ -30,11 +52,12 @@ filterBtns.forEach(btn => {
     });
   });
 });
-// Contact form validation (client-side only — wire up a real endpoint before launch)
 const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
+const formError = document.getElementById('formError');
 
 if (contactForm) {
+  contactForm.addEventListener('focusin', () => trackEvent('contact_form_start'), { once: true });
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     let valid = true;
@@ -53,9 +76,25 @@ if (contactForm) {
     });
 
     if (valid) {
-      // Replace this with a real fetch() call to your backend/form service
+      const formData = new FormData(contactForm);
+      const subject = encodeURIComponent(`Project enquiry from ${formData.get('name')}`);
+      const body = encodeURIComponent([
+        `Name: ${formData.get('name')}`,
+        `Email: ${formData.get('email')}`,
+        `Service: ${formData.get('service')}`,
+        `Budget: ${formData.get('budget') || 'Not specified'}`,
+        '',
+        String(formData.get('message'))
+      ].join('\n'));
+
+      window.location.href = `mailto:hello@digidracuaa.com?subject=${subject}&body=${body}`;
+      trackEvent('contact_form_submit', { delivery_method: 'mailto' });
+      formSuccess.textContent = 'Your email draft is ready. Send it from your email app to complete the enquiry.';
       formSuccess.classList.add('show');
-      contactForm.reset();
+      if (formError) formError.classList.remove('show');
+    } else {
+      trackEvent('contact_form_error');
+      if (formError) formError.classList.add('show');
     }
   });
 }

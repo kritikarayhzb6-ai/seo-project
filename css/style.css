@@ -765,6 +765,8 @@ button{ font: inherit; background: none; border: none; cursor: pointer; color: i
   color: var(--brass);
 }
 .form-success.show{ display: block; }
+.form-error-global{ margin-top: 14px; }
+.form-error-global.show{ display: block; }
 
 .contact-panel{ position: relative; padding-left: 32px; }
 .panel-block{ margin-bottom: 30px; }
@@ -839,3 +841,29 @@ button{ font: inherit; background: none; border: none; cursor: pointer; color: i
   .audit-table{ display: block; overflow-x: auto; white-space: nowrap; }
   .audit-table td:last-child{ white-space: normal; min-width: 240px; }
 }
+
+/* ===== DETAIL PAGES ===== */
+.detail-page{ background: var(--bone); color: var(--ink); }
+.detail-hero{ padding: clamp(70px, 10vw, 130px) 0 60px; background: var(--ink); color: var(--bone); }
+.detail-wrap{ max-width: 1000px; margin: 0 auto; padding: 0 var(--pad); }
+.detail-kicker{ color: var(--brass); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.detail-hero h1{ max-width: 800px; margin-top: 16px; font-family: var(--font-display); font-size: clamp(2.6rem, 6vw, 5.8rem); font-weight: 500; line-height: 1; }
+.detail-hero h1 em{ color: var(--oxblood-light); font-weight: 400; }
+.detail-hero p{ max-width: 62ch; margin-top: 24px; color: rgba(246, 241, 231, 0.72); font-size: 1.05rem; }
+.detail-content{ padding: 70px 0; }
+.detail-content h2{ margin: 48px 0 20px; font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.1rem); font-weight: 500; }
+.detail-content h2:first-child{ margin-top: 0; }
+.detail-content p{ max-width: 72ch; color: rgba(18, 16, 20, 0.74); }
+.detail-content ul{ display: grid; gap: 12px; max-width: 72ch; padding-left: 1.2rem; color: rgba(18, 16, 20, 0.74); }
+.detail-columns{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 24px; background: rgba(18, 16, 20, 0.16); border: 1px solid rgba(18, 16, 20, 0.16); }
+.detail-card{ padding: 24px; background: var(--bone); }
+.detail-card h3{ margin-bottom: 10px; font-family: var(--font-display); font-size: 1.3rem; font-weight: 500; }
+.detail-card p{ font-size: 0.9rem; }
+.detail-faq{ display: grid; gap: 12px; }
+.detail-faq details{ padding: 18px 20px; border: 1px solid rgba(18, 16, 20, 0.15); }
+.detail-faq summary{ cursor: pointer; font-weight: 600; }
+.detail-faq p{ margin-top: 12px; font-size: 0.92rem; }
+.case-meta{ display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 24px; color: rgba(246, 241, 231, 0.65); font-size: 0.88rem; }
+.detail-cta{ margin-top: 50px; }
+.detail-page .site-footer{ background: var(--ink); }
+@media (max-width: 700px){ .detail-columns{ grid-template-columns: 1fr; } }

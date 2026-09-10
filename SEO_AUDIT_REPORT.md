@@ -40,11 +40,11 @@ The form displays a success message after browser-side validation but does not s
 
 **Recommendation:** Connect the form to a trusted endpoint such as a serverless function or form service. Show the success message only after the request succeeds, and show an error state when it fails.
 
-#### 2. Placeholder business contact information remains
+#### 2. Verified business contact information is still required
 
-The footer and contact panel use `+91 00000 00000`. Social links point to `#`. These details reduce trust and are unsuitable for local SEO.
+The footer and contact panel still use `+91 00000 00000`. Social placeholders are now non-clickable until real profile URLs are supplied. The phone number must still be replaced before launch.
 
-**Recommendation:** Replace them with the real phone number, verified email address, social profile URLs, business address, service area, and operating hours.
+**Recommendation:** Replace the phone number and pending social labels with verified business details and real profile URLs.
 
 #### 3. Final production domain must be confirmed
 
@@ -60,11 +60,11 @@ The Services page combines website creation, SEO, paid media, automation, video,
 
 ### Medium Priority
 
-#### 5. Portfolio items are not real destination pages
+#### 5. Portfolio proof needs verified metrics
 
-Portfolio cards use `href="#"`, so users cannot open a case study or inspect project details.
+Portfolio cards now lead to crawlable case-study pages, but several outcomes still need verified analytics or client-approved evidence.
 
-**Recommendation:** Give each project a real case-study URL with the client problem, work delivered, timeline, measurable results, technologies, and a relevant image.
+**Recommendation:** Add measured results, before-and-after evidence, and client permission before publishing claims.
 
 #### 6. Limited visual content and image SEO
 
@@ -72,11 +72,11 @@ The site contains very few project images, and service media blocks do not appea
 
 **Recommendation:** Add relevant project images with descriptive `alt` text, explicit dimensions, responsive loading, and WebP or AVIF versions where supported.
 
-#### 7. Structured data is not present
+#### 7. LocalBusiness data needs verification
 
-No JSON-LD business, service, website, or breadcrumb schema was identified.
+Organization, WebSite, Service, and report schema are present. LocalBusiness schema is intentionally waiting for a verified phone number and address.
 
-**Recommendation:** Add `Organization` or `LocalBusiness` schema with verified details. Add `Service` schema to service pages and `BreadcrumbList` schema where appropriate. Validate it with Google's Rich Results Test.
+**Recommendation:** Add LocalBusiness and BreadcrumbList schema after the business details are confirmed. Validate all schema with Google's Rich Results Test.
 
 #### 8. Social sharing can be improved
 
@@ -117,9 +117,9 @@ The current pages provide service descriptions but do not establish a continuing
 
 ### Immediate
 
-1. Replace the phone number, email, address, and social profile placeholders.
+1. Replace the phone number and pending social profile labels with verified business details.
 2. Confirm the final production domain and update canonical URLs if needed.
-3. Connect the contact form to a real delivery endpoint.
+3. Replace the email-draft fallback with a real form delivery endpoint.
 4. Create or verify the Google Business Profile.
 5. Deploy the site over HTTPS.
 

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Digital Marketing Portfolio and Case Studies | Digi Dracuaa</title>
-<meta name="description" content="Explore Digi Dracuaa's website, SEO, marketing, video, and app development projects and case studies.">
+<meta name="description" content="See Digi Dracuaa website, SEO, marketing, video, and app development case studies.">
 <meta name="keywords" content="digital marketing portfolio, SEO case studies, web development portfolio, app development projects">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Digi Dracuaa">
@@ -17,8 +17,8 @@
 <meta property="og:url" content="https://seo-project-lake.vercel.app/portfolio.html">
 <meta property="og:image" content="https://seo-project-lake.vercel.app/images/og-image.png">
 <meta name="twitter:image" content="https://seo-project-lake.vercel.app/images/og-image.png">
-<meta property="og:image:width" content="1254">
-<meta property="og:image:height" content="1254">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Digi Dracuaa logo">
 <meta property="og:image:type" content="image/png">
 <meta name="twitter:card" content="summary_large_image">
@@ -27,7 +27,8 @@
 <meta name="twitter:image:alt" content="Digi Dracuaa logo">
 <meta name="twitter:url" content="https://seo-project-lake.vercel.app/portfolio.html">
 <link rel="canonical" href="https://seo-project-lake.vercel.app/portfolio.html">
-<link rel="icon" type="image/png" href="/images/favicaon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -47,7 +48,7 @@
       <span class="logo-text">Digi Dracuaa</span>
     </a>
 
-    <nav class="main-nav" id="mainNav">
+    <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -75,11 +76,11 @@
 <!-- ===== FILTER ===== -->
 <section class="portfolio-filter">
   <div class="filter-wrap">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="web">Web</button>
-    <button class="filter-btn" data-filter="marketing">Marketing</button>
-    <button class="filter-btn" data-filter="video">Video</button>
-    <button class="filter-btn" data-filter="app">Apps</button>
+    <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+    <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+    <button class="filter-btn" data-filter="marketing" aria-pressed="false">Marketing</button>
+    <button class="filter-btn" data-filter="video" aria-pressed="false">Video</button>
+    <button class="filter-btn" data-filter="app" aria-pressed="false">Apps</button>
   </div>
 </section>
 
@@ -87,7 +88,7 @@
 <section class="portfolio-grid-section">
   <div class="portfolio-grid" id="portfolioGrid">
 
-    <a href="#" class="port-item" data-cat="web" style="--tile-bg:#3B2A2E;">
+    <a href="case-studies/aurelio-cabs.html" class="port-item" data-cat="web" style="--tile-bg:#3B2A2E;">
       <div class="port-inner">
         <span class="work-cat">Web, Branding</span>
         <h3>Aurelio Cabs</h3>
@@ -95,7 +96,7 @@
       </div>
     </a>
 
-    <a href="#" class="port-item" data-cat="marketing" style="--tile-bg:#2E2A3B;">
+    <a href="case-studies/webquick-india.html" class="port-item" data-cat="marketing" style="--tile-bg:#2E2A3B;">
       <div class="port-inner">
         <span class="work-cat">Digital Marketing</span>
         <h3>WebQuick India</h3>
@@ -103,23 +104,23 @@
       </div>
     </a>
 
-    <a href="#" class="port-item" data-cat="video" style="--tile-bg:#2A3B31;">
+    <a href="case-studies/diksha-cinematics.html" class="port-item" data-cat="video" style="--tile-bg:#2A3B31;">
       <div class="port-inner">
-        <span class="work-cat">Video , Motion</span>
+        <span class="work-cat">Video and Motion</span>
         <h3>Diksha Cinematics</h3>
         <p>Landing page and brand presence for a cinematography studio, built to showcase reel work first.</p>
       </div>
     </a>
 
-    <a href="#" class="port-item" data-cat="app" style="--tile-bg:#3B342A;">
+    <a href="case-studies/lifetrack.html" class="port-item" data-cat="app" style="--tile-bg:#3B342A;">
       <div class="port-inner">
-        <span class="work-cat">Product  App</span>
+        <span class="work-cat">Product App</span>
         <h3>LifeTrack</h3>
         <p>A habit and finance tracker built in React, with persistent local storage and smooth, purposeful motion.</p>
       </div>
     </a>
 
-    <a href="#" class="port-item" data-cat="web" style="--tile-bg:#2A303B;">
+    <a href="case-studies/ved-it-tech.html" class="port-item" data-cat="web" style="--tile-bg:#2A303B;">
       <div class="port-inner">
         <span class="work-cat">Education</span>
         <h3>VED IT-TECH</h3>
@@ -127,7 +128,7 @@
       </div>
     </a>
 
-    <a href="#" class="port-item" data-cat="marketing" style="--tile-bg:#3B2A3A;">
+    <a href="case-studies/js-learning-series.html" class="port-item" data-cat="marketing" style="--tile-bg:#3B2A3A;">
       <div class="port-inner">
         <span class="work-cat">Content Strategy</span>
         <h3>JS Learning Series</h3>
@@ -179,7 +180,7 @@
           <li><a href="services.html#web">Website Creation</a></li>
           <li><a href="services.html#marketing">Digital Marketing</a></li>
           <li><a href="services.html#ai">AI Automation</a></li>
-          <li><a href="services.html#motion">Video, Motion</a></li>
+          <li><a href="services/video-motion.html">Video and Motion</a></li>
           <li><a href="services.html#android">App Development</a></li>
         </ul>
       </div>
@@ -197,9 +198,9 @@
     <div class="footer-bottom">
       <span> 2026 Digi Dracuaa. All rights reserved.</span>
       <div class="footer-social">
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="Behance">Behance</a>
+        <span>Instagram profile pending</span>
+        <span>LinkedIn profile pending</span>
+        <span>Behance profile pending</span>
       </div>
     </div>
   </div>
