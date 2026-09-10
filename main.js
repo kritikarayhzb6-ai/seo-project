@@ -36,6 +36,12 @@ document.querySelectorAll('.btn, .nav-cta').forEach(link => {
   link.addEventListener('click', () => trackEvent('cta_click', { link_text: link.textContent.trim() }));
 });
 
+document.querySelectorAll('.port-item').forEach(link => {
+  link.addEventListener('click', () => trackEvent('portfolio_project_click', {
+    project: link.querySelector('h3')?.textContent.trim() || 'unknown'
+  }));
+});
+
 const filterBtns = document.querySelectorAll('.filter-btn');
 const portItems = document.querySelectorAll('.port-item');
 
