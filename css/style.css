@@ -663,6 +663,39 @@ button{ font: inherit; background: none; border: none; cursor: pointer; color: i
   }
   .service-media{ order: -1; }
 }
+.service-guidance{
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: rgba(18, 16, 20, 0.18);
+}
+.service-guidance-wrap{
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+}
+.service-guidance h2{
+  max-width: 12ch;
+  margin-top: 14px;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+.service-guidance-copy{
+  display: grid;
+  gap: 20px;
+}
+.service-guidance-copy p{
+  max-width: 68ch;
+  color: rgba(246, 241, 231, 0.72);
+  line-height: 1.7;
+}
+@media (max-width: 900px){
+  .service-guidance-wrap{ grid-template-columns: 1fr; gap: 30px; }
+  .service-guidance h2{ max-width: 18ch; }
+}
 /* ===== PORTFOLIO FILTER ===== */
 .portfolio-filter{ padding: 10px 0 30px; }
 .filter-wrap{
